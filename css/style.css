@@ -37,13 +37,18 @@ body {
    padding: 30px 0;
 }
 
-.home .header .nav {
-   display: flex;
-   justify-content: center;
+.home .header .nav .logo {
+   display: block;
+   margin: 20px auto 40px auto;
+}
+
+.home .header .nav .logo:hover {
+   opacity: 0.8;
 }
 
 .home .header .nav ul {
    display: flex;
+   justify-content: center;
    flex-direction: row;
    list-style: none;
 }
@@ -62,16 +67,19 @@ body {
    font-weight: bold;
    font-size: 12px;
    padding: 20px;
+   transition-duration: 200ms;
 }
 
 .home .header .nav ul li a:hover {
-   border-top: 1px double var(--color-primary);
    color: var(--color-primary);
+   transform: scale(1.2);
 }
 
-.home .header .nav ul .logo {
-   margin: 0 40px;
+.home .header .nav ul li a:active {
+    color: var(--color-primary-light);
+    background-color: none;
 }
+
 
 /***********************
       HOME - BANNER
