@@ -25,12 +25,14 @@ body {
 *********************/
 
 .home {
-   position: relative;
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
    background-image: url("../images/bg-home.jpg");
    height: 100vh; /* viewport height */ 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .home .header {
@@ -39,7 +41,7 @@ body {
 
 .home .header .nav .logo {
    display: block;
-   margin: 20px auto 20px auto;
+   margin: 20px auto 40px auto;;
 }
 
 .home .header .nav .logo:hover {
@@ -55,9 +57,9 @@ body {
 
 .home .header .nav ul li {
    display: flex;
-   align-items: center;
    justify-content: space-around;
-   width: 150px;
+   align-items: center;
+   width: 120px;
 }
 
 .home .header .nav ul li a {
@@ -66,7 +68,7 @@ body {
    text-decoration: none;
    font-weight: bold;
    font-size: 12px;
-   padding: 20px;
+   padding: px;
    transition-duration: 200ms;
 }
 
@@ -86,15 +88,9 @@ body {
 ************************/
 
 .home .banner {
-   position: absolute;
    text-align: center;
    color: white;
-   top: 50%;
-   left: 50%;
-   width: 770px;
-   height: 270px;
-   margin-left: -385px;
-   margin-top: -75px;
+   margin: 70px 0;
 }
 
 .home .banner span {
@@ -192,7 +188,7 @@ body {
    width: 66%;
    color: white;
    margin-left: 7%;
-   margin-top: 100px;
+   margin-top: 50px;
 }
 
 .about .experience h2 {
@@ -225,7 +221,7 @@ body {
 ************************/
 
 .services {
-   padding: 100px 0;
+   padding: 50px 0;
    text-align: center;
    background-color: var(--color-primary-light);
 }
@@ -266,7 +262,7 @@ body {
 *********************/
 
 .appointment {
-   padding: 100px 0;
+   padding: 50px 0;
    background-color: var(--color-primary);
    height: 100vh;
    background-image: url(../images/chair-ic.png);
@@ -296,11 +292,12 @@ body {
    display: flex;
    justify-content: space-between;
    margin-bottom: 20px;
+   gap: 10px 50px;
 }
 
 .appointment .input-wrapper {
    width: 100%;
-   margin-right: 50px;
+   /* margin-right: 50px; */
 }
 
 .appointment .input-wrapper:last-of-type {
@@ -339,12 +336,16 @@ body {
    border-radius: 8px;
 }
 
+.appointment button:hover {
+   box-shadow: 0px 0px 10px 1px var(--color-primary-light);
+}
+
 /*********************
       GALLERY
 *********************/
 
 .gallery {
-   padding: 100px 0;
+   padding: 50px 0;
    background-color: var(--color-primary-light);
 }
 
@@ -368,6 +369,7 @@ body {
    width: 900px;
    height: 100vh;
    margin: 50px auto;
+   align-items: center;
 }
 
 .gallery .gallery-wrapper div {
@@ -452,4 +454,114 @@ footer {
    padding: 40px;
    text-align: center;
    font-size: 12px;
+}
+
+/*********************
+      QUERIES
+*********************/
+
+@media (max-width: 1200px) {
+
+   .container {
+      width: 85%;
+   }
+
+   .home .header .nav ul {
+       flex-wrap: wrap;
+   }
+      
+   .home .header .nav ul li {
+      width: 100px;
+   }
+
+   .home .banner {
+      width: 85%;
+   }
+
+   .about .container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .about .timing {
+      width: 50%;
+   }
+
+   .about .experience {
+      width: 70%;
+      margin-left: 0;
+   }
+
+   .about .experience .text {
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+   }
+
+   .about .experience .text img {
+      align-self: center;
+      width: 300px;
+   }
+
+   .services .boxes {
+      flex-wrap: wrap;
+   }
+
+   .appointment .personal-data {
+      flex-wrap: wrap;
+   }
+
+   .gallery .gallery-wrapper {
+      width: 100%;
+      margin: 0;
+      height: 700px;
+   }
+
+   .location .head  {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+   }
+
+}
+
+@media (max-width: 650px) {
+   .container {
+      width: 90%;
+   }
+
+   .home .banner  h1{
+      display: inline-block;
+      width: 400px;
+      font-size: 70px;
+   }
+
+   .about .timing {
+      width: 100%;
+   }
+
+   .about .experience {
+      width: 100%;
+      margin-left: 0;
+   }
+
+   .location .head  {
+      flex-direction: column;
+      align-content: center;
+   }
+
+   .location .head .info {
+      align-self: flex-start;
+   }
+
+   .gallery .gallery-wrapper {
+      flex-wrap: nowrap;
+      height: auto;
+   }
+
+   .gallery .gallery-wrapper div {
+      width: 100%;
+   }
 }
