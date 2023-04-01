@@ -16,7 +16,7 @@ Durante a execução aprendi sobre conceitos de HTML e CSS, como formulários, l
 
 ![background-image](https://user-images.githubusercontent.com/118489479/228654532-36e52f96-16e1-43ea-aee1-5baa8fbf2a80.png)
 
-
+<hr>
 
 
 
